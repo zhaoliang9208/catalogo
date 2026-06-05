@@ -10,6 +10,13 @@
       body {
         font-family: "Inter", sans-serif;
       }
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
     </style>
   </head>
   <body class="bg-gray-50 text-gray-900">
@@ -20,11 +27,11 @@
             <img src="img/2.jpg" class="w-full h-full object-cover opacity-30" alt="Fondo Banner">
         </div>
       <div
-        class="max-w-6xl mx-auto px-4 py-6 flex flex-col sm:flex-row justify-between items-center gap-4"
+        class="relative z-10 max-w-6xl mx-auto px-4 py-6 flex flex-col sm:flex-row justify-between items-center gap-4"
       >
             <div class="flex items-center gap-3">
                 <img src="img/1.jpg" class="w-20 h-20 rounded-full border-2 border-white shadow-sm" alt="Perfil CubaVolt">
-                <h1 class="text-2xl font-bold text-indigo-600">CubaVolt</h1>
+                <h1 class="text-2xl font-bold text-indigo-600"></h1>
             </div>
 
         <div class="relative w-full sm:w-64">
@@ -77,176 +84,7 @@
         class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
         id="product-grid"
       >
-        <!-- Product 1 -->
-        <div
-          class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow border border-gray-100"
-        >
-          <img
-            src="productos/1.jpg"
-            alt="Reloj Elegante"
-            class="w-full h-64 object-cover"
-          />
-          <div class="p-6">
-            <h3 class="text-xl font-bold mb-2 text-gray-800">Reloj Elegante</h3>
-            <p class="text-gray-600 mb-4 text-sm">
-              Diseño sofisticado y resistente al agua. Ideal para cualquier
-              ocasión.
-            </p>
-            <div class="flex items-center justify-between">
-              <span class="text-2xl font-bold text-indigo-600">$45.00</span>
-              <a
-                href="https://wa.me/5353451622?text=Lo%20quiero%3A%20Reloj%20Elegante"
-                target="_blank"
-                class="bg-green-500 text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-green-600 transition-colors"
-              >
-                Whatsapp
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Product 2 -->
-        <div
-          class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow border border-gray-100"
-        >
-          <img
-            src="https://images.unsplash.com/photo-1505740420928-58a534761775?auto=format&fit=crop&w=500&q=80"
-            alt="Auriculares Pro"
-            class="w-full h-64 object-cover"
-          />
-          <div class="p-6">
-            <h3 class="text-xl font-bold mb-2 text-gray-800">
-              Auriculares Pro
-            </h3>
-            <p class="text-gray-600 mb-4 text-sm">
-              Cancelación de ruido activa y sonido de alta fidelidad.
-            </p>
-            <div class="flex items-center justify-between">
-              <span class="text-2xl font-bold text-indigo-600">$89.00</span>
-              <a
-                href="https://wa.me/5353451622?text=Lo%20quiero%3A%20Auriculares%20Pro"
-                target="_blank"
-                class="bg-green-500 text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-green-600 transition-colors"
-              >
-                Whatsapp
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Product 3 -->
-        <div
-          class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow border border-gray-100"
-        >
-          <img
-            src="https://images.unsplash.com/photo-1534095-f8f-68-4-f-2-9-5?auto=format&fit=crop&w=500&q=80"
-            alt="Silla Ergonómica"
-            class="w-full h-64 object-cover"
-          />
-          <div class="p-6">
-            <h3 class="text-xl font-bold mb-2 text-gray-800">
-              Silla Ergonómica
-            </h3>
-            <p class="text-gray-600 mb-4 text-sm">
-              Máximo confort para tus largas jornadas de trabajo.
-            </p>
-            <div class="flex items-center justify-between">
-              <span class="text-2xl font-bold text-indigo-600">$120.00</span>
-              <a
-                href="https://wa.me/5353451622?text=Lo%20quiero%3A%20Silla%20Ergonómica"
-                target="_blank"
-                class="bg-green-500 text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-green-600 transition-colors"
-              >
-                Whatsapp
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Product 4 -->
-        <div
-          class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow border border-gray-100"
-        >
-          <img
-            src="https://images.unsplash.com/photo-1542291060-3aa691750696?auto=format&fit=crop&w=500&q=80"
-            alt="Mochila Viajera"
-            class="w-full h-64 object-cover"
-          />
-          <div class="p-6">
-            <h3 class="text-xl font-bold mb-2 text-gray-800">
-              Mochila Viajera
-            </h3>
-            <p class="text-gray-600 mb-4 text-sm">
-              Espaciosa, impermeable y perfecta para aventuras.
-            </p>
-            <div class="flex items-center justify-between">
-              <span class="text-2xl font-bold text-indigo-600">$35.00</span>
-              <a
-                href="https://wa.me/5353451622?text=Lo%20quiero%3A%20Mochila%20Viajera"
-                target="_blank"
-                class="bg-green-500 text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-green-600 transition-colors"
-              >
-                Whatsapp
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Product 5 -->
-        <div
-          class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow border border-gray-100"
-        >
-          <img
-            src="https://images.unsplash.com/photo-1572635196237-14651e81801a?auto=format&fit=crop&w=500&q=80"
-            alt="Lámpara Moderna"
-            class="w-full h-64 object-cover"
-          />
-          <div class="p-6">
-            <h3 class="text-xl font-bold mb-2 text-gray-800">
-              Lámpara Moderna
-            </h3>
-            <p class="text-gray-600 mb-4 text-sm">
-              Iluminación LED ajustable para crear el ambiente perfecto.
-            </p>
-            <div class="flex items-center justify-between">
-              <span class="text-2xl font-bold text-indigo-600">$25.00</span>
-              <a
-                href="https://wa.me/5353451622?text=Lo%20quiero%3A%20Lámpara%20Moderna"
-                target="_blank"
-                class="bg-green-500 text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-green-600 transition-colors"
-              >
-                Whatsapp
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Product 6 -->
-        <div
-          class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow border border-gray-100"
-        >
-          <img
-            src="https://images.unsplash.com/photo-1526170375885-4d8ecb29e618?auto=format&fit=crop&w=500&q=80"
-            alt="Cámara Vintage"
-            class="w-full h-64 object-cover"
-          />
-          <div class="p-6">
-            <h3 class="text-xl font-bold mb-2 text-gray-800">Cámara Vintage</h3>
-            <p class="text-gray-600 mb-4 text-sm">
-              Captura momentos con el estilo clásico de la fotografía analógica.
-            </p>
-            <div class="flex items-center justify-between">
-              <span class="text-2xl font-bold text-indigo-600">$150.00</span>
-              <a
-                href="https://wa.me/5353451622?text=Lo%20quiero%3A%20Cámara%20Vintage"
-                target="_blank"
-                class="bg-green-500 text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-green-600 transition-colors"
-              >
-                Whatsapp
-              </a>
-            </div>
-          </div>
-        </div>
+        <!-- Products will be rendered here by JS -->
       </div>
     </main>
 
@@ -259,30 +97,281 @@
         </p>
         <div class="mt-2 text-xs text-gray-400">
           Diseñado para una experiencia de compra rápida y sencilla.
+          <a href="admin.html" class="ml-2 opacity-0 hover:opacity-50 transition-opacity underline">Admin</a>
         </div>
       </div>
     </footer>
 
+    <!-- Floating Cart Button -->
+    <div class="fixed bottom-6 right-6 z-50">
+      <button id="cart-button" class="relative bg-indigo-600 text-white p-4 rounded-full shadow-lg hover:bg-indigo-700 transition-all transform hover:scale-110">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13H5.4l-1.4 4H12a1 1 0 001-1V13z" />
+        </svg>
+        <span id="cart-count" class="absolute -top-2 -right-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full border-2 border-white">0</span>
+      </button>
+    </div>
+
+    <!-- Cart Side Panel -->
+    <div id="cart-panel" class="fixed top-0 right-0 h-full w-full sm:w-96 bg-white shadow-2xl z-50 transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col">
+      <div class="p-6 border-b border-gray-200 flex justify-between items-center bg-indigo-600 text-white">
+        <h2 class="text-xl font-bold">Mi Cesta</h2>
+        <button id="close-cart" class="text-white hover:text-gray-200 transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+      <div id="cart-items" class="flex-1 overflow-y-auto p-6 space-y-4">
+        <!-- Items will be rendered here -->
+        <p class="text-gray-500 text-center mt-10">La cesta está vacía</p>
+      </div>
+
+      <div class="p-6 border-t border-gray-200 bg-gray-50">
+        <div class="flex justify-between items-center mb-4">
+          <span class="text-gray-600 font-medium">Total:</span>
+          <span id="cart-total" class="text-2xl font-bold text-indigo-600">$0.00</span>
+        </div>
+        <div class="flex gap-3">
+          <button id="clear-cart" class="flex-1 px-4 py-2 text-sm font-medium text-gray-600 hover:text-gray-800 transition-colors">
+            Vaciar
+          </button>
+          <button id="checkout-whatsapp" class="flex-2 bg-green-500 text-white px-6 py-2 rounded-full text-sm font-bold hover:bg-green-600 transition-colors shadow-md">
+            Enviar WhatsApp
+          </button>
+        </div>
+      </div>
+    </div>
+
     <script>
-      const searchInput = document.getElementById("search-input");
-      const products = document.querySelectorAll("#product-grid > div");
+      // --- Product Data Integration ---
+      const DEFAULT_PRODUCTS = [
+        {
+          id: 1,
+          title: "Licras Cortas Deportivas para Mujer",
+          description: "Licras cortas deportivas en varios colores, todas con un diseño que realza los glúteos gracias a su efecto push-up. Son elásticas, cómodas y perfectas para entrenamientos de fitness, yoga o simplemente para uso diario. Su talle alto ofrece un buen soporte y su tela de mezcla de nylon y elastano asegura una gran flexibilidad y durabilidad.",
+          price: 1.75,
+          images: ["productos/licras.jpg"],
+          hidden: false
+        },
+        {
+          id: 2,
+          title: "Carburador para plantas electricas",
+          description: "Kit de conversión de carburador de doble combustible diseñado para generadores de 2-3KW, adecuado para motores GX160, GX200, 168F y 170F, que incluye un carburador de GLP y CNG con un interruptor manual.",
+          price: 80.00,
+          images: ["productos/carburador/1.avif", "productos/carburador/2.avif", "productos/carburador/3.avif", "productos/carburador/4.avif", "productos/carburador/5.avif"],
+          hidden: false
+        }
+      ];
 
-      searchInput.addEventListener("input", (e) => {
-        const term = e.target.value.toLowerCase();
+      function getProducts() {
+        const stored = localStorage.getItem("cv_products");
+        if (!stored) {
+          localStorage.setItem("cv_products", JSON.stringify(DEFAULT_PRODUCTS));
+          return DEFAULT_PRODUCTS;
+        }
+        return JSON.parse(stored);
+      }
 
-        products.forEach((product) => {
-          const title = product.querySelector("h3").textContent.toLowerCase();
-          const description = product
-            .querySelector("p")
-            .textContent.toLowerCase();
+      function renderProducts(filterTerm = "") {
+        const products = getProducts();
+        const grid = document.getElementById("product-grid");
 
-          if (title.includes(term) || description.includes(term)) {
-            product.style.display = "block";
-          } else {
-            product.style.display = "none";
-          }
+        const filtered = products.filter(p => {
+          const matchesSearch = p.title.toLowerCase().includes(filterTerm.toLowerCase()) ||
+                                p.description.toLowerCase().includes(filterTerm.toLowerCase());
+          return !p.hidden && matchesSearch;
         });
+
+        if (filtered.length === 0) {
+          grid.innerHTML = `<p class="col-span-full text-center text-gray-500 py-12">No se encontraron productos.</p>`;
+          return;
+        }
+
+        grid.innerHTML = filtered.map(p => `
+          <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow border border-gray-100">
+            <div class="relative group">
+              <div class="flex overflow-x-auto snap-x snap-mandatory scroll-smooth h-64 no-scrollbar">
+                ${p.images.map((img, idx) => `<img src="${img}" alt="${p.title} ${idx+1}" class="snap-center shrink-0 w-full h-64 object-cover" />`).join("")}
+              </div>
+              <button class="nav-img prev-img absolute left-2 top-1/2 -translate-y-1/2 bg-white/80 p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity shadow-sm text-gray-800">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
+              </button>
+              <button class="nav-img next-img absolute right-2 top-1/2 -translate-y-1/2 bg-white/80 p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity shadow-sm text-gray-800">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+              </button>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2 text-gray-800">${p.title}</h3>
+              <p class="text-gray-600 mb-4 text-sm">${p.description}</p>
+              <div class="flex items-center justify-between">
+                <span class="text-2xl font-bold text-indigo-600">$${p.price.toFixed(2)}</span>
+                <button
+                  data-name="${p.title}"
+                  data-price="${p.price}"
+                  class="add-to-cart-btn bg-indigo-600 text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-indigo-700 transition-colors"
+                >
+                  Añadir al Carrito
+                </button>
+              </div>
+            </div>
+          </div>
+        `).join("");
+
+        // Re-bind image navigation and cart buttons since HTML was replaced
+        document.querySelectorAll(".nav-img").forEach(btn => {
+          btn.addEventListener("click", (e) => {
+            const isNext = btn.classList.contains("next-img");
+            const container = btn.closest(".relative").querySelector(".no-scrollbar");
+            const scrollAmount = container.offsetWidth;
+            container.scrollBy({
+              left: isNext ? scrollAmount : -scrollAmount,
+              behavior: "smooth"
+            });
+          });
+        });
+
+        document.querySelectorAll(".add-to-cart-btn").forEach(btn => {
+          btn.addEventListener("click", () => {
+            CartManager.addItem(btn.dataset.name, btn.dataset.price);
+            document.getElementById("cart-panel").classList.remove("translate-x-full");
+          });
+        });
+      }
+
+      const searchInput = document.getElementById("search-input");
+      searchInput.addEventListener("input", (e) => {
+        renderProducts(e.target.value);
       });
+
+      // --- Cart & Fingerprinting System ---
+
+      async function getFingerprint() {
+        let deviceId = localStorage.getItem("cv_device_id");
+        if (deviceId) return deviceId;
+
+        try {
+          const ipResponse = await fetch("https://api.ipify.org?format=json");
+          const { ip } = await ipResponse.json();
+
+          const base = crypto.randomUUID();
+          const details = `${navigator.userAgent}|${screen.width}x${screen.height}|${ip}`;
+
+          const hash = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(base + details));
+          const hex = Array.from(new Uint8Array(hash)).map(b => b.toString(16).padStart(2, "0")).join("");
+
+          deviceId = `CV-${hex.substring(0, 12).toUpperCase()}`;
+          localStorage.setItem("cv_device_id", deviceId);
+        } catch (e) {
+          console.error("Fingerprint error:", e);
+          deviceId = `CV-GEN-${Math.random().toString(36).substr(2, 9).toUpperCase()}`;
+        }
+        return deviceId;
+      }
+
+      const CartManager = {
+        state: JSON.parse(localStorage.getItem("cv_cart") || "[]"),
+
+        save() {
+          localStorage.setItem("cv_cart", JSON.stringify(this.state));
+          renderCart();
+        },
+
+        addItem(name, price) {
+          const existing = this.state.find(item => item.name === name);
+          if (existing) {
+            existing.quantity++;
+          } else {
+            this.state.push({ id: Date.now() + Math.random(), name, price: parseFloat(price), quantity: 1 });
+          }
+          this.save();
+        },
+
+        updateQuantity(id, delta) {
+          const item = this.state.find(i => i.id === id);
+          if (item) {
+            item.quantity += delta;
+            if (item.quantity <= 0) this.removeItem(id);
+            this.save();
+          }
+        },
+
+        removeItem(id) {
+          this.state = this.state.filter(i => i.id !== id);
+          this.save();
+        },
+
+        clear() {
+          this.state = [];
+          this.save();
+        },
+
+        getTotal() {
+          return this.state.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+        }
+      };
+
+      function renderCart() {
+        const container = document.getElementById("cart-items");
+        const countEl = document.getElementById("cart-count");
+        const totalEl = document.getElementById("cart-total");
+
+        const totalItems = CartManager.state.reduce((sum, item) => sum + item.quantity, 0);
+        countEl.textContent = totalItems;
+        totalEl.textContent = `$${CartManager.getTotal().toFixed(2)}`;
+
+        if (CartManager.state.length === 0) {
+          container.innerHTML = `<p class="text-gray-500 text-center mt-10">La cesta está vacía</p>`;
+          return;
+        }
+
+        container.innerHTML = CartManager.state.map(item => `
+          <div class="flex items-center justify-between bg-gray-50 p-3 rounded-xl border border-gray-100">
+            <div>
+              <p class="font-bold text-gray-800 text-sm">${item.name}</p>
+              <p class="text-xs text-indigo-600 font-medium">$${item.price.toFixed(2)}</p>
+            </div>
+            <div class="flex items-center gap-3">
+              <button onclick="CartManager.updateQuantity(${item.id}, -1)" class="w-6 h-6 flex items-center justify-center bg-white border border-gray-300 rounded-full text-gray-600 hover:bg-gray-100 transition-colors">-</button>
+              <span class="text-sm font-semibold text-gray-700 w-4 text-center">${item.quantity}</span>
+              <button onclick="CartManager.updateQuantity(${item.id}, 1)" class="w-6 h-6 flex items-center justify-center bg-white border border-gray-300 rounded-full text-gray-600 hover:bg-gray-100 transition-colors">+</button>
+            </div>
+          </div>
+        `).join("");
+      }
+
+      document.getElementById("cart-button").addEventListener("click", () => {
+        document.getElementById("cart-panel").classList.remove("translate-x-full");
+      });
+
+      document.getElementById("close-cart").addEventListener("click", () => {
+        document.getElementById("cart-panel").classList.add("translate-x-full");
+      });
+
+      document.getElementById("clear-cart").addEventListener("click", () => {
+        CartManager.clear();
+      });
+
+      document.getElementById("checkout-whatsapp").addEventListener("click", async () => {
+        if (CartManager.state.length === 0) return alert("La cesta está vacía");
+
+        const fingerprint = await getFingerprint();
+        let message = `🚀 *Pedido CubaVolt*\n\n`;
+
+        CartManager.state.forEach(item => {
+          message += `📦 ${item.quantity}x ${item.name} - $${(item.price * item.quantity).toFixed(2)}\n`;
+        });
+
+        message += `\n💰 *Total: $${CartManager.getTotal().toFixed(2)}*\n`;
+        message += `\n🆔 Dispositivo: ${fingerprint}`;
+
+        window.open(`https://wa.me/5353451622?text=${encodeURIComponent(message)}`, "_blank");
+      });
+
+      // Init
+      renderProducts();
+      renderCart();
     </script>
   </body>
 </html>
