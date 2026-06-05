@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CubaVolt - Catálogo de Productos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap");
+      body {
+        font-family: "Inter", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50 text-gray-900">
+    <!-- Header / Banner -->
+    <header class="relative bg-white shadow-sm sticky top-0 z-10 overflow-hidden">
+        <!-- Imagen de Fondo con Overlay para legibilidad -->
+        <div class="absolute inset-0 z-0">
+            <img src="img/2.jpg" class="w-full h-full object-cover opacity-30" alt="Fondo Banner">
+        </div>
+      <div
+        class="max-w-6xl mx-auto px-4 py-6 flex flex-col sm:flex-row justify-between items-center gap-4"
+      >
+            <div class="flex items-center gap-3">
+                <img src="img/1.jpg" class="w-20 h-20 rounded-full border-2 border-white shadow-sm" alt="Perfil CubaVolt">
+                <h1 class="text-2xl font-bold text-indigo-600">CubaVolt</h1>
+            </div>
+
+        <div class="relative w-full sm:w-64">
+          <div
+            class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none"
+          >
+            <svg
+              class="h-5 w-5 text-gray-400"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+              />
+            </svg>
+          </div>
+            <input
+                type="text"
+                id="search-input"
+                placeholder="Buscar producto..."
+                class="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-full leading-5 bg-gray-50/80 backdrop-blur-sm placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm transition-all"
+            />
+        </div>
+
+        <div class="hidden sm:block text-sm text-gray-500 font-medium">
+          Catálogo Online
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-6xl mx-auto px-4 py-12">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-extrabold mb-4 text-gray-900">
+          Nuestros Productos
+        </h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">
+          Explora nuestra selección exclusiva. Haz clic en el botón para
+          solicitar el producto directamente vía WhatsApp.
+        </p>
+      </div>
+
+      <!-- Product Grid -->
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
+        id="product-grid"
+      >
+        <!-- Product 1 -->
+        <div
+          class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow border border-gray-100"
+        >
+          <img
+            src="productos/1.jpg"
+            alt="Reloj Elegante"
+            class="w-full h-64 object-cover"
+          />
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2 text-gray-800">Reloj Elegante</h3>
+            <p class="text-gray-600 mb-4 text-sm">
+              Diseño sofisticado y resistente al agua. Ideal para cualquier
+              ocasión.
+            </p>
+            <div class="flex items-center justify-between">
+              <span class="text-2xl font-bold text-indigo-600">$45.00</span>
+              <a
+                href="https://wa.me/5353451622?text=Lo%20quiero%3A%20Reloj%20Elegante"
+                target="_blank"
+                class="bg-green-500 text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-green-600 transition-colors"
+              >
+                Whatsapp
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div
+          class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow border border-gray-100"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1505740420928-58a534761775?auto=format&fit=crop&w=500&q=80"
+            alt="Auriculares Pro"
+            class="w-full h-64 object-cover"
+          />
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2 text-gray-800">
+              Auriculares Pro
+            </h3>
+            <p class="text-gray-600 mb-4 text-sm">
+              Cancelación de ruido activa y sonido de alta fidelidad.
+            </p>
+            <div class="flex items-center justify-between">
+              <span class="text-2xl font-bold text-indigo-600">$89.00</span>
+              <a
+                href="https://wa.me/5353451622?text=Lo%20quiero%3A%20Auriculares%20Pro"
+                target="_blank"
+                class="bg-green-500 text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-green-600 transition-colors"
+              >
+                Whatsapp
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div
+          class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow border border-gray-100"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1534095-f8f-68-4-f-2-9-5?auto=format&fit=crop&w=500&q=80"
+            alt="Silla Ergonómica"
+            class="w-full h-64 object-cover"
+          />
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2 text-gray-800">
+              Silla Ergonómica
+            </h3>
+            <p class="text-gray-600 mb-4 text-sm">
+              Máximo confort para tus largas jornadas de trabajo.
+            </p>
+            <div class="flex items-center justify-between">
+              <span class="text-2xl font-bold text-indigo-600">$120.00</span>
+              <a
+                href="https://wa.me/5353451622?text=Lo%20quiero%3A%20Silla%20Ergonómica"
+                target="_blank"
+                class="bg-green-500 text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-green-600 transition-colors"
+              >
+                Whatsapp
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 4 -->
+        <div
+          class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow border border-gray-100"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1542291060-3aa691750696?auto=format&fit=crop&w=500&q=80"
+            alt="Mochila Viajera"
+            class="w-full h-64 object-cover"
+          />
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2 text-gray-800">
+              Mochila Viajera
+            </h3>
+            <p class="text-gray-600 mb-4 text-sm">
+              Espaciosa, impermeable y perfecta para aventuras.
+            </p>
+            <div class="flex items-center justify-between">
+              <span class="text-2xl font-bold text-indigo-600">$35.00</span>
+              <a
+                href="https://wa.me/5353451622?text=Lo%20quiero%3A%20Mochila%20Viajera"
+                target="_blank"
+                class="bg-green-500 text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-green-600 transition-colors"
+              >
+                Whatsapp
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 5 -->
+        <div
+          class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow border border-gray-100"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1572635196237-14651e81801a?auto=format&fit=crop&w=500&q=80"
+            alt="Lámpara Moderna"
+            class="w-full h-64 object-cover"
+          />
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2 text-gray-800">
+              Lámpara Moderna
+            </h3>
+            <p class="text-gray-600 mb-4 text-sm">
+              Iluminación LED ajustable para crear el ambiente perfecto.
+            </p>
+            <div class="flex items-center justify-between">
+              <span class="text-2xl font-bold text-indigo-600">$25.00</span>
+              <a
+                href="https://wa.me/5353451622?text=Lo%20quiero%3A%20Lámpara%20Moderna"
+                target="_blank"
+                class="bg-green-500 text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-green-600 transition-colors"
+              >
+                Whatsapp
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 6 -->
+        <div
+          class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow border border-gray-100"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1526170375885-4d8ecb29e618?auto=format&fit=crop&w=500&q=80"
+            alt="Cámara Vintage"
+            class="w-full h-64 object-cover"
+          />
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2 text-gray-800">Cámara Vintage</h3>
+            <p class="text-gray-600 mb-4 text-sm">
+              Captura momentos con el estilo clásico de la fotografía analógica.
+            </p>
+            <div class="flex items-center justify-between">
+              <span class="text-2xl font-bold text-indigo-600">$150.00</span>
+              <a
+                href="https://wa.me/5353451622?text=Lo%20quiero%3A%20Cámara%20Vintage"
+                target="_blank"
+                class="bg-green-500 text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-green-600 transition-colors"
+              >
+                Whatsapp
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-200 mt-12 py-8">
+      <div class="max-w-6xl mx-auto px-4 text-center">
+        <p class="text-gray-500 text-sm">
+          &copy; 2026 <span class="font-semibold">CubaVolt</span>. Todos los
+          derechos reservados.
+        </p>
+        <div class="mt-2 text-xs text-gray-400">
+          Diseñado para una experiencia de compra rápida y sencilla.
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const searchInput = document.getElementById("search-input");
+      const products = document.querySelectorAll("#product-grid > div");
+
+      searchInput.addEventListener("input", (e) => {
+        const term = e.target.value.toLowerCase();
+
+        products.forEach((product) => {
+          const title = product.querySelector("h3").textContent.toLowerCase();
+          const description = product
+            .querySelector("p")
+            .textContent.toLowerCase();
+
+          if (title.includes(term) || description.includes(term)) {
+            product.style.display = "block";
+          } else {
+            product.style.display = "none";
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
