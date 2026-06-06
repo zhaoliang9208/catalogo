@@ -146,6 +146,31 @@
 
     <script>
       // --- Product Data Integration ---
+      let cupExchangeRate = 0;
+
+      async function fetchExchangeRate() {
+        try {
+          const proxyUrl = "https://corsproxy.io/?";
+          const targetUrl = "https://eltoque.com/tasas-de-cambio-cuba";
+          const response = await fetch(proxyUrl + encodeURIComponent(targetUrl));
+          const html = await response.text();
+          const parser = new DOMParser();
+          const doc = parser.parseFromString(html, "text/html");
+
+          const selector = "#mercado-informal > div.w-full.lg\\:max-w-2xl.mx-auto.mt-4 > div > water-mark > div > table > tbody > tr:nth-child(1) > td.py-3.pl-3.align-middle > div > span.font-extrabold.text-lg.leading-tight.text-red-600";
+          const element = doc.querySelector(selector);
+
+          if (element) {
+            const text = element.textContent.replace(/[^0-9.,]/g, "").replace(",", ".");
+            cupExchangeRate = parseFloat(text);
+            console.log("Tasa de cambio actualizada:", cupExchangeRate);
+            renderProducts(); // Re-render to show CUP prices
+          }
+        } catch (e) {
+          console.error("Error fetching exchange rate:", e);
+        }
+      }
+
       const DEFAULT_PRODUCTS = [
         {
           id: 1,
@@ -206,7 +231,10 @@
               <h3 class="text-xl font-bold mb-2 text-gray-800">${p.title}</h3>
               <p class="text-gray-600 mb-4 text-sm">${p.description}</p>
               <div class="flex items-center justify-between">
-                <span class="text-2xl font-bold text-indigo-600">$${p.price.toFixed(2)}</span>
+                <div class="flex flex-col">
+                  <span class="text-2xl font-bold text-indigo-600">$${p.price.toFixed(2)}</span>
+                  ${cupExchangeRate ? `<span class="text-sm font-medium text-gray-500">(${ (p.price * cupExchangeRate).toLocaleString('es-CU', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) } CUP)</span>` : ''}
+                </div>
                 <button
                   data-name="${p.title}"
                   data-price="${p.price}"
@@ -370,6 +398,7 @@
       });
 
       // Init
+      fetchExchangeRate();
       renderProducts();
       renderCart();
     </script>
